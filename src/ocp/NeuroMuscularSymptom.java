@@ -1,6 +1,6 @@
 package ocp;
 
-public class NeuroMuscularSymptom { 
+public class NeuroMuscularSymptom extends Symtom { 
 	int covidImpact; 
 	int severityIndex;
 	public NeuroMuscularSymptom(int covidImpact, int severityIndex) {
@@ -8,16 +8,5 @@ public class NeuroMuscularSymptom {
 		this.covidImpact = covidImpact;
 		this.severityIndex = severityIndex;
 	}
-	public int getCovidImpact() {
-		return covidImpact;
-	}
-	public void setCovidImpact(int covidImpact) {
-		this.covidImpact = covidImpact;
-	}
-	public int getSeverityIndex() {
-		return severityIndex;
-	}
-	public void setSeverityIndex(int severityIndex) {
-		this.severityIndex = severityIndex;
-	}
+
 }
