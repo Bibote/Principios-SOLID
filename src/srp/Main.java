@@ -1,4 +1,4 @@
-package ocp;
+package srp;
 public class Main {
 	public static void main(String[] args) {
 		Covid19Pacient cp= new Covid19Pacient("Juan", 53, false);

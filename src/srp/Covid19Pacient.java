@@ -1,4 +1,4 @@
-package ocp;
+package srp;
 
 public class Covid19Pacient extends Pacient{
 	public Covid19Pacient(String name, int age, boolean isAlergic) {

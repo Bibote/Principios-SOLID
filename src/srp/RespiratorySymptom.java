@@ -1,4 +1,4 @@
-package ocp;
+package srp;
 
 public class RespiratorySymptom extends Symptom { 
 
