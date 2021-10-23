@@ -7,12 +7,12 @@ public class Pacient {
 	String name;
 	int age; 
 	boolean isAlergic;
-	protected Map<CardioVascularSymptom, Integer> cardios = new
-				HashMap<CardioVascularSymptom, Integer>();
-	protected Map<NeuroMuscularSymptom, Integer> neuros = new
-				HashMap<NeuroMuscularSymptom, Integer>();
-	protected Map<RespiratorySymptom, Integer> respirs = new
-				HashMap<RespiratorySymptom, Integer>();
+	protected Map<Symptom, Integer> cardios = new
+				HashMap<Symptom, Integer>();
+	protected Map<Symptom, Integer> neuros = new
+				HashMap<Symptom, Integer>();
+	protected Map<Symptom, Integer> respirs = new
+				HashMap<Symptom, Integer>();
 	public Pacient(String name, int age, boolean isAlergic) {
 		super();
 		this.name=name;
@@ -40,20 +40,20 @@ public class Pacient {
 	public void setAlergic(boolean isAlergic) {
 		this.isAlergic = isAlergic;
 	}
-	public void addCardioSymptom(CardioVascularSymptom c, Integer weight) {
+	public void addCardioSymptom(Symptom c, Integer weight) {
 		cardios.put(c, weight);
 	}
-	public void addNeuroMuscularSymptom(NeuroMuscularSymptom nm, Integer weight) {
+	public void addNeuroMuscularSymptom(Symptom nm, Integer weight) {
 		neuros.put(nm, weight);
 	}
-	public void addRespiratorySymptom(RespiratorySymptom r, Integer weight) {
+	public void addRespiratorySymptom(Symptom r, Integer weight) {
 		respirs.put(r, weight);
 	}
 	public int sanatedDays() {
 		int days=0;
 		for (Symptom c:cardios.keySet())
 			days=days+c.getAffectedDays();
-		for (NeuroMuscularSymptom c:neuros.keySet())
+		for (Symptom c:neuros.keySet())
 			days=days+c.getAffectedDays();
 		for (Symptom c:respirs.keySet())
 			days=days+c.getAffectedDays();
